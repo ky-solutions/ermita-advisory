@@ -18,6 +18,12 @@ npm start
 
 Aucune publication n’a été réalisée.
 
+## Configuration Vercel
+
+`vercel.json` impose le framework Next.js, `npm ci` et `npm run build`, et laisse Vercel détecter la sortie du framework. Dans les réglages Vercel, le Root Directory doit être la racine du dépôt (`./`). Ne pas servir `public/` comme un site statique : cela rend les images accessibles mais laisse les routes App Router en 404. Après modification des paramètres, créer un nouveau déploiement, de préférence sans réutiliser le cache du précédent.
+
+Pour le domaine actuellement fourni, renseigner `NEXT_PUBLIC_SITE_URL=https://ermita-advisory.vercel.app`. Garder `NEXT_PUBLIC_ALLOW_INDEXING=false` tant que les validations avant publication ne sont pas terminées. Aucun déploiement n’est lancé automatiquement par l’agent.
+
 ## Sources et organisation
 
 Le brief de référence est `ermita-advisory-kit-integration/brief-integration-ermita-advisory.md`, qui référence les assets intégrables et complète la copie de la racine. Les briefs, l’archive, les maquettes et tous les assets d’origine sont préservés.

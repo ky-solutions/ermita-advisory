@@ -1,3 +1,6 @@
-import type {MetadataRoute} from 'next';
-import {publicOrigin,routes} from '@/lib/seo';
-export default function sitemap():MetadataRoute.Sitemap{const origin=publicOrigin();return origin?routes.map(path=>({url:new URL(path,origin).href})):[]}
+import type { MetadataRoute } from "next";
+import { routes } from "@/lib/seo";
+import { absoluteUrl, isIndexable } from "@/lib/site";
+export default function sitemap(): MetadataRoute.Sitemap {
+  return isIndexable ? routes.map((path) => ({ url: absoluteUrl(path) })) : [];
+}

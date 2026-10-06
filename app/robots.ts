@@ -1,3 +1,10 @@
-import type {MetadataRoute} from 'next';
-import {publicOrigin} from '@/lib/seo';
-export default function robots():MetadataRoute.Robots{const origin=publicOrigin();return {rules:{userAgent:'*',allow:origin?'/':undefined,disallow:origin?'/api/':'/'},sitemap:origin?`${origin}/sitemap.xml`:undefined}}
+import type { MetadataRoute } from "next";
+import { SITE_URL, isIndexable } from "@/lib/site";
+export default function robots(): MetadataRoute.Robots {
+  return isIndexable
+    ? {
+        rules: { userAgent: "*", allow: "/" },
+        sitemap: `${SITE_URL}/sitemap.xml`,
+      }
+    : { rules: { userAgent: "*", disallow: "/" } };
+}

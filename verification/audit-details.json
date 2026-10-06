@@ -1,0 +1,8 @@
+{
+  "captionContrast": 10.32,
+  "icons": "passed",
+  "clientValidationAndServerFocus": "passed",
+  "doubleSubmission": "passed",
+  "providerFailureAnnouncement": "passed",
+  "realEmailSent": false
+}

@@ -22,7 +22,7 @@ Aucune publication n’a été réalisée.
 
 Le brief de référence est `ermita-advisory-kit-integration/brief-integration-ermita-advisory.md`, qui référence les assets intégrables et complète la copie de la racine. Les briefs, l’archive, les maquettes et tous les assets d’origine sont préservés.
 
-- `app/` : accueil, cabinet, index d’expertises, quatre expertises via une route dynamique fermée, contact, mentions légales, confidentialité, 404, robots, sitemap et API de contact.
+- `app/` : accueil, cabinet, quatre expertises via une route dynamique fermée, contact, mentions légales, confidentialité, 404, robots, sitemap et API de contact.
 - `content/site.ts` : contenus typés centralisés, repris du brief ; `scripts/import-content.cjs` permet de les régénérer depuis le kit (écrase uniquement le module généré).
 - `components/` : header, navigation mobile, logo, composants UI, hero, cartes d’expertise, méthode, bannière de contact, footer et formulaire.
 - `public/` : copies des assets fournis et tokens graphiques. Polices chargées avec `next/font/local` ; images WebP optimisées par `next/image`.
@@ -49,7 +49,7 @@ Documentation technique utilisée : [Next.js](https://nextjs.org/docs/app/gettin
 
 ## SEO
 
-La prévisualisation est non indexable par défaut : robots désactivés dans les métadonnées, `robots.txt` interdit l’indexation et le sitemap reste vide. Pour la publication, fournir un domaine HTTPS réel dans `SITE_URL` et mettre explicitement `SITE_INDEXABLE=true`, puis reconstruire le site. Cela active les URL canoniques, le sitemap et les robots de production. Les métadonnées sociales utilisent le visuel architectural fourni ; un visuel de partage dédié peut le remplacer après validation.
+La prévisualisation est non indexable par défaut : `robots.txt` interdit l’indexation et le sitemap reste vide. Pour la publication, fournir un domaine HTTPS réel dans `NEXT_PUBLIC_SITE_URL` et mettre explicitement `NEXT_PUBLIC_ALLOW_INDEXING=true`, puis reconstruire le site. Le sitemap et les robots de production sont alors activés. Les canoniques et métadonnées sociales restent présents dans tous les environnements ; sans domaine configuré, leur origine est `http://localhost:3000`. L’image sociale dédiée est générée en 1200 × 630.
 
 ## Vérifications
 
@@ -62,7 +62,7 @@ npm run verify:contact
 npm run verify:browser
 ```
 
-Le script navigateur utilise Playwright et Edge installé localement, sans télécharger un navigateur. Il parcourt les dix routes à 320, 390, 768 et 1440 px, contrôle les statuts, un H1 par page, l’absence de débordement horizontal, les liens locaux, les 404, le lien actif, le menu clavier, la fermeture après navigation, les erreurs JavaScript et le formulaire non configuré. Captures réalisées après chargement des images et polices. Le test contact vérifie les champs invalides, tailles, configuration absente, origine étrangère, champ piège, acceptation et échec fournisseur, limitation ; les services externes sont simulés.
+Le script navigateur utilise Playwright et Edge installé localement, sans télécharger un navigateur. Il parcourt les neuf routes à 320, 390, 768 et 1440 px, contrôle les statuts, un H1 par page, l’absence de débordement horizontal, les liens locaux, les 404, le lien actif, le menu clavier, la fermeture après navigation, les erreurs JavaScript et le formulaire non configuré. Captures réalisées après chargement des images et polices. Le test contact vérifie les champs invalides, tailles, configuration absente, origine étrangère, champ piège, acceptation et échec fournisseur, limitation ; les services externes sont simulés.
 
 Build, types et lint validés. Audit des dépendances de production : aucune vulnérabilité signalée. L’audit complet relève cinq entrées liées à une même vulnérabilité transitive de `braces` dans l’outillage ESLint, sans correctif disponible selon npm lors de l’installation ; à surveiller lors des mises à jour. Les textes secondaires et les boutons emploient les couleurs du kit avec un contraste AA pour les combinaisons principales. Une recette manuelle avec lecteur d’écran et le test de délivrabilité réelle restent à faire avant publication.
 
@@ -88,4 +88,9 @@ Le corps et l’interface utilisent désormais Space Grotesk variable (300–700
 
 
 La page d’index /expertises a été supprimée à la demande du commanditaire. Les liens Nos expertises pointent désormais vers /#expertises ; les quatre pages détaillées sont conservées.
+
+
+## Corrections de l’audit
+Voir [le rapport détaillé](verification/AUDIT.md) pour les tâches T-01 à T-18, les scores, les choix et les blocages. Configuration publique centralisée dans lib/site.ts. Les coordonnées de contact du footer restent masquées sans NEXT_PUBLIC_CONTACT_EMAIL et NEXT_PUBLIC_CONTACT_PHONE. La CSP est bloquante par défaut ; CSP_REPORT_ONLY=true sert au diagnostic. HSTS est réservé à une configuration de production HTTPS. Les polices du navigateur sont désormais en WOFF2.
+
 

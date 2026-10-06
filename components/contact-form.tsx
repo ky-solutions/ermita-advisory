@@ -32,6 +32,7 @@ export function ContactForm({ configured }: { configured: boolean }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(checked.values),
       });
+      if (res.status === 204) return;
       const result = await res.json();
       setErrors(result.errors || {});
       setStatus(result.message);

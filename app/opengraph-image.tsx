@@ -7,7 +7,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export default async function OpenGraphImage() {
   const font = await readFile(
-    join(process.cwd(), "public/fonts/SpaceGrotesk-Variable.ttf"),
+    join(process.cwd(), "public/fonts/SpaceGrotesk-OG.ttf"),
   );
   const logo = await readFile(
     join(process.cwd(), "public/logo/ermita-advisory-logo-transparent.png"),

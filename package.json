@@ -9,7 +9,10 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "verify:browser": "node scripts/verify-browser.cjs",
-    "verify:contact": "node scripts/verify-contact.cjs"
+    "verify:contact": "node scripts/verify-contact.cjs",
+    "verify:audit": "node scripts/verify-audit.cjs",
+    "verify:audit-details": "node scripts/verify-audit-details.cjs",
+    "audit:lighthouse": "node scripts/lighthouse-audit.mjs"
   },
   "dependencies": {
     "next": "16.3.8",

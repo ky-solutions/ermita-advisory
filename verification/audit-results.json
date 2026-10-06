@@ -1,0 +1,76 @@
+{
+  "summaries": [
+    {
+      "path": "/",
+      "title": "Ermita Advisory | Ingénierie financière & conseil en management",
+      "description": "Ermita Advisory, cabinet de conseil à Paris : ingénierie financière, pilotage de la performance, stratégie et accompagnement de vos projets de développement.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/le-cabinet",
+      "title": "Le cabinet | Ermita Advisory",
+      "description": "Découvrez la démarche d’Ermita Advisory, cabinet parisien d’ingénierie financière et de conseil en management.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/contact",
+      "title": "Contact | Ermita Advisory",
+      "description": "Présentez votre besoin à Ermita Advisory : décision financière, pilotage, stratégie ou accompagnement de projets.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/expertises/ingenierie-financiere",
+      "title": "Ingénierie financière | Ermita Advisory",
+      "description": "Évaluez la viabilité de vos projets et préparez vos décisions de financement grâce à des analyses, des prévisions et des modèles financiers structurés.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/expertises/pilotage-et-performance",
+      "title": "Pilotage et performance | Ermita Advisory",
+      "description": "Disposez d’une vision claire de vos résultats, de votre trésorerie et de vos priorités grâce à des outils de suivi adaptés à votre entreprise.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/expertises/strategie-et-management",
+      "title": "Stratégie et management | Ermita Advisory",
+      "description": "Clarifiez vos orientations, identifiez vos axes de développement et faites évoluer votre organisation pour soutenir vos ambitions.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/expertises/accompagnement-de-projets",
+      "title": "Accompagnement de projets | Ermita Advisory",
+      "description": "Transformez une idée en projet structuré, depuis l’étude de faisabilité jusqu’au suivi de sa mise en œuvre.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/mentions-legales",
+      "title": "Mentions légales | Ermita Advisory",
+      "description": "Mentions légales et informations réglementaires du cabinet Ermita Advisory, conseil en ingénierie financière et management à Paris.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    },
+    {
+      "path": "/confidentialite",
+      "title": "Politique de confidentialité | Ermita Advisory",
+      "description": "Politique de protection des données personnelles et respect de la vie privée d’Ermita Advisory, conforme au RGPD.",
+      "image": "http://127.0.0.1:3000/opengraph-image",
+      "axeViolations": 0
+    }
+  ],
+  "violations": [],
+  "consoleErrors": [],
+  "sitemapCount": 9,
+  "fonts": [
+    "/_next/static/media/Poppins_Regular-s.p.0gil936ueptcn.woff2",
+    "/_next/static/media/SpaceGrotesk_Variable-s.p.3vfx8nl1u6c9i.woff2"
+  ],
+  "mobile": "passed",
+  "headers": "passed"
+}

@@ -1,7 +1,7 @@
 {
   "validation": "passed",
   "missingConfig": 503,
-  "honeypot": 400,
+  "honeypot": 204,
   "foreignOrigin": 403,
   "providerAcceptanceMock": 200,
   "providerFailureMock": 502,

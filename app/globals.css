@@ -1158,3 +1158,10 @@ html {
 .dark .process-item .number {
   color: #839aff;
 }
+
+.breadcrumbs a,
+.legal a,
+.contact-layout form p a {
+  display: inline-block;
+  min-height: 24px;
+}

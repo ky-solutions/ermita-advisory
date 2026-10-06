@@ -1,0 +1,225 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/le-cabinet",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/ingenierie-financiere",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/pilotage-et-performance",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/strategie-et-management",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/accompagnement-de-projets",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/mentions-legales",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/confidentialite",
+      "width": 320,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/le-cabinet",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/ingenierie-financiere",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/pilotage-et-performance",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/strategie-et-management",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/accompagnement-de-projets",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/mentions-legales",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/confidentialite",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/le-cabinet",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/ingenierie-financiere",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/pilotage-et-performance",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/strategie-et-management",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/accompagnement-de-projets",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/mentions-legales",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/confidentialite",
+      "width": 768,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/le-cabinet",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/ingenierie-financiere",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/pilotage-et-performance",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/strategie-et-management",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/expertises/accompagnement-de-projets",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/mentions-legales",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "/confidentialite",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "menu": "passed",
+  "links": "passed",
+  "notFound": "passed",
+  "unconfiguredForm": "passed",
+  "pageErrors": []
+}

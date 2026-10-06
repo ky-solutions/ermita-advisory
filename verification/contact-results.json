@@ -1,0 +1,10 @@
+{
+  "validation": "passed",
+  "missingConfig": 503,
+  "honeypot": 400,
+  "foreignOrigin": 403,
+  "providerAcceptanceMock": 200,
+  "providerFailureMock": 502,
+  "rateLimitMock": 429,
+  "realEmailSent": false
+}

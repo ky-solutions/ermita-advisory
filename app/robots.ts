@@ -1,0 +1,3 @@
+import type {MetadataRoute} from 'next';
+import {publicOrigin} from '@/lib/seo';
+export default function robots():MetadataRoute.Robots{const origin=publicOrigin();return {rules:{userAgent:'*',allow:origin?'/':undefined,disallow:origin?'/api/':'/'},sitemap:origin?`${origin}/sitemap.xml`:undefined}}

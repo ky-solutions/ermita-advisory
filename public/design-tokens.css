@@ -1,0 +1,10 @@
+:root {
+  --color-background: #F7F6F2;
+  --color-foreground: #24242B;
+  --color-accent: #385CDB;
+  --color-muted: #55565F;
+  --color-border: #D5D4CF;
+  --color-white: #FFFFFF;
+  --container-max: 1280px;
+  --radius-button: 2px;
+}

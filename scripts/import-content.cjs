@@ -1,0 +1,15 @@
+const fs=require('fs');
+const brief=fs.readFileSync('ermita-advisory-kit-integration/brief-integration-ermita-advisory.md','utf8');
+const section=(start,end)=>brief.split(start)[1].split(end)[0];
+const text=(part,label)=>part.match(new RegExp('\\*\\*'+label+' :\\*\\* ([^\\r\\n]+)'))[1];
+const homePart=section('### Accueil','### Le cabinet');
+const cabinetPart=section('### Le cabinet','### Index des expertises');
+const names=['Ingénierie financière','Pilotage et performance','Stratégie et management','Accompagnement de projets'];
+const slugs=['ingenierie-financiere','pilotage-et-performance','strategie-et-management','accompagnement-de-projets'];
+const descriptions=[...homePart.matchAll(/\d\. \*\*[^*]+\*\* — ([^\r\n]+)/g)].map(x=>x[1]);
+const items=names.map((name,i)=>{const p=brief.split('#### '+name)[1].split(/\r?\n###/)[0];return {name,slug:slugs[i],description:descriptions[i],title:text(p,'H1'),intro:p.split(/\*\*H1 :\*\*[^\r\n]+\r?\n\r?\n/)[1].split(/\r?\n\r?\n/)[0],services:text(p,'Accompagnement').replace(/\.$/,'').split(' ; '),deliverables:text(p,'Livrables').replace(/\.$/,'').split(' ; '),steps:text(p,'Démarche').replace(/\.$/,'').split(' ; '),cta:text(p,'CTA')}});
+const method=[...homePart.matchAll(/- \*\*([^*]+) :\*\* ([^\r\n]+)/g)].map(x=>({title:x[1],text:x[2]}));
+const approach=[...cabinetPart.matchAll(/- \*\*([^*]+) :\*\* ([^\r\n]+)/g)].map(x=>({title:x[1],text:x[2]}));
+const home={intro:text(homePart,'Introduction'),cabinet:homePart.split('**Section cabinet — H2 :**')[1].split(/\r?\n\r?\n/)[1]};
+const cabinetIntro=cabinetPart.split(/\*\*H1 :\*\*[^\r\n]+\r?\n\r?\n/)[1].split(/\r?\n\r?\n/)[0];
+fs.writeFileSync('content/site.ts',`export type Expertise={name:string;slug:string;description:string;title:string;intro:string;services:string[];deliverables:string[];steps:string[];cta:string};\nexport const expertises:Expertise[]=${JSON.stringify(items,null,2)};\nexport const home=${JSON.stringify(home,null,2)};\nexport const method=${JSON.stringify(method,null,2)};\nexport const approach=${JSON.stringify(approach,null,2)};\nexport const cabinetIntro=${JSON.stringify(cabinetIntro)};\n`);
